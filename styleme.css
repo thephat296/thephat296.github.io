@@ -21,10 +21,19 @@ p {
     color: aliceblue;
 }
 
+p:first-letter {
+    font-size: 1.5em;
+}
+
 ul {
     color: aliceblue;
 }
 
 a {
     color: crimson;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
