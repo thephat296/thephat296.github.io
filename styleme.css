@@ -1,0 +1,30 @@
+body {
+    background-color: dimgray;
+}
+
+h1 {
+    font-size: 40px;
+    color: cornflowerblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: start;
+}
+
+.agenda {
+    font-size: 22px;
+    font-style: oblique;
+    font-family: sans-serif;
+    color: cornflowerblue;
+}
+
+p {
+    color: aliceblue;
+}
+
+ul {
+    color: aliceblue;
+}
+
+a {
+    color: crimson;
+}
