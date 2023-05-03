@@ -5,3 +5,10 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.bannerWrapper {
+    background-image: url("bannerbg.png");
+    background-repeat: repeat-x;
+    height: 50px;
+    position: relative;
+}
