@@ -7,6 +7,8 @@ The image should repeat in both directions across the page and should not move w
 3. Pie bullet: Set all bulleted lists of items on the page to use an image for their bullet icon rather than the
 normal black circle. Use the following image: pie-icon.gif
 4. Wide headings: Place 0.25em horizontal spacing between neighboring letters in all headings on the page.
+5. Tight heading background: Make it so that the gray background behind the headings on the page is only
+behind the text itself, not stretched across the entire width of the page.
 -->
 
 <head>
@@ -16,7 +18,9 @@ normal black circle. Use the following image: pie-icon.gif
 </head>
 
 <body>
-    <h1>Grandma's Lemon Meringue Pie</h1>
+    <div class="head">
+        <h1>Grandma's Lemon Meringue Pie</h1>
+    </div>
     <br>
     <img src="https://mumstudents.org/cs472/2014-09/Homework/1/pie.jpg" alt="Pie">
     <p>
