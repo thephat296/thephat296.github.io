@@ -6,12 +6,16 @@ h1, h2 {
     font-size: 18pt;
     font-weight: lighter;
     letter-spacing: 0.25em;
+    display: inline-block;
 }
 
 h1 {
-    text-align: center;
     font-weight: bold;
     font-size: 22pt;
+}
+
+.head {
+    text-align: center;
 }
 
 body {
