@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Retrieve Grade</title>
+  </head>
+  <body>
+    <form action="http://mumstudents.org/params.php">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required /><br />
+
+      <label for="id">Student ID:</label>
+      <input type="text" id="id" name="id" required /><br />
+
+      <label for="assignment">Assignment:</label>
+      <select id="assignment" name="assignment" required>
+        <option value="">Select an assignment</option>
+        <option value="assignment1">Assignment 1</option>
+        <option value="assignment2">Assignment 2</option>
+        <option value="assignment3">Assignment 3</option>
+      </select>
+      <br />
+
+      <label>Entry:</label>
+      <input
+        type="radio"
+        id="entryFeb"
+        name="entry"
+        value="February"
+        required />
+      <label for="entryFeb">February</label>
+      <input type="radio" id="entryMay" name="entry" value="May" required />
+      <label for="entryMay">May</label>
+      <input type="radio" id="entryAug" name="entry" value="August" required />
+      <label for="entryAug">August</label>
+      <input
+        type="radio"
+        id="entryNov"
+        name="entry"
+        value="November"
+        required />
+      <label for="entryNov">November</label>
+      <br />
+
+      <label>
+        <input type="checkbox" name="confirmation" value="confirmed" required />
+        I confirm that I am looking up my own grade.
+      </label>
+      <br />
+      <br />
+
+      <button type="submit">Get Grade</button>
+    </form>
+  </body>
+</html>
