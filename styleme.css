@@ -1,39 +1,39 @@
 body {
-    background-color: dimgray;
+  background-color: dimgray;
 }
 
 h1 {
-    font-size: 40px;
-    color: cornflowerblue;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-align: start;
+  font-size: 40px;
+  color: cornflowerblue;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: start;
 }
 
 .agenda {
-    font-size: 22px;
-    font-style: oblique;
-    font-family: sans-serif;
-    color: cornflowerblue;
+  font-size: 22px;
+  font-style: oblique;
+  font-family: sans-serif;
+  color: cornflowerblue;
 }
 
 p {
-    color: aliceblue;
+  color: aliceblue;
 }
 
 p:first-letter {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 ul {
-    color: aliceblue;
+  color: aliceblue;
 }
 
 a {
-    color: crimson;
-    text-decoration: none;
+  color: crimson;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }

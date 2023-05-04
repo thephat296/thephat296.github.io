@@ -1,128 +1,128 @@
 body {
-    background-image: url("background.png");
-    font-size: 8pt;
-    font-family: Verdana, Tahoma, sans-serif;
-    margin: 0;
-    padding: 0;
+  background-image: url("background.png");
+  font-size: 8pt;
+  font-family: Verdana, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .banner-wrapper {
-    background-image: url("bannerbg.png");
-    background-repeat: repeat-x;
-    height: 50px;
-    position: relative;
+  background-image: url("bannerbg.png");
+  background-repeat: repeat-x;
+  height: 50px;
+  position: relative;
 }
 
 .movie-title {
-    text-align: center;
-    font-size: 24pt;
-    font-weight: bold;
-    font-family: Tahoma, Verdana, sans-serif;
-    text-shadow: 3px 3px #999999;
+  text-align: center;
+  font-size: 24pt;
+  font-weight: bold;
+  font-family: Tahoma, Verdana, sans-serif;
+  text-shadow: 3px 3px #999999;
 }
 
 .content {
-    width: 800px;
-    margin: auto;
-    border: 4px solid gray;
-    border-radius: 20px;
-    overflow: hidden;
+  width: 800px;
+  margin: auto;
+  border: 4px solid gray;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .rotten-section {
-    background-image: url("rbg.png");
-    background-repeat: repeat-x;
-    position: relative;
-    height: 83px;
-    width: 550px;
-    font-size: 48pt;
-    color: red;
-    font-weight: bold;
-    display: flex;
-    border-top-left-radius: 20px;
+  background-image: url("rbg.png");
+  background-repeat: repeat-x;
+  position: relative;
+  height: 83px;
+  width: 550px;
+  font-size: 48pt;
+  color: red;
+  font-weight: bold;
+  display: flex;
+  border-top-left-radius: 20px;
 }
 
 .overview-image {
-    float: right;
+  float: right;
 }
 
 .overview {
-    width: 250px;
-    float: right;
-    clear: right;
-    margin: 0;
-    background-color: #A2B964;
-    font-size: 8pt;
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
-    padding-top: 10pt;
-    padding-left: 10pt;
+  width: 250px;
+  float: right;
+  clear: right;
+  margin: 0;
+  background-color: #a2b964;
+  font-size: 8pt;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  padding-top: 10pt;
+  padding-left: 10pt;
 }
 
 dt {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 dd {
-    padding-bottom: 10pt;
+  padding-bottom: 10pt;
 }
 
 .overview-link {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .review-section {
-    width: 550px;
-    overflow: auto;
+  width: 550px;
+  overflow: auto;
 }
 
 .review-column-left {
-    width: 47%;
-    margin-left: 2%;
-    float: left;
+  width: 47%;
+  margin-left: 2%;
+  float: left;
 }
 
 .review-column-right {
-    width: 47%;
-    float: right;
-    margin-right: 2%;
+  width: 47%;
+  float: right;
+  margin-right: 2%;
 }
 
 .review-content {
-    background-color: #E8DC9B;
-    border: 2px solid gray;
-    border-radius: 10px;
-    padding: 8px;
-    overflow: auto;
-    font-weight: bold;
+  background-color: #e8dc9b;
+  border: 2px solid gray;
+  border-radius: 10px;
+  padding: 8px;
+  overflow: auto;
+  font-weight: bold;
 }
 
 .review-icon {
-    float: left;
-    margin-right: 5px;
+  float: left;
+  margin-right: 5px;
 }
 
 .reviewer {
-    margin-bottom: 20pt;
+  margin-bottom: 20pt;
 }
 
 .reviewer-icon {
-    float: left;
+  float: left;
 }
 
 .review-bar {
-    background-color: #A2B964;
-    text-align: center;
-    clear: both;
-    margin: 0;
-    padding: 5px;
+  background-color: #a2b964;
+  text-align: center;
+  clear: both;
+  margin: 0;
+  padding: 5px;
 }
 
 .validator {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    opacity: 0.5;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  opacity: 0.5;
 }
