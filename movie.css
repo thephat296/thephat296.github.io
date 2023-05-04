@@ -126,3 +126,7 @@ dd {
   right: 0;
   opacity: 0.5;
 }
+
+.review-section img {
+  float: left;
+}
