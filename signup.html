@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Signup</title>
+    <link rel="stylesheet" type="text/css" href="signup.css" />
+  </head>
+  <body>
+    <form action="http://mumstudents.org/params.php">
+      <fieldset>
+        <legend>New User Signup:</legend>
+        <div>
+          <label class="property" for="name">Name:</label>
+          <input type="text" id="name" name="name" maxlength="16" required />
+        </div>
+
+        <div>
+          <label class="property" for="gender">Gender:</label>
+          <input type="radio" id="male" name="gender" value="male" required />
+          <label for="male">Male</label>
+          <input
+            type="radio"
+            id="female"
+            name="gender"
+            value="female"
+            checked
+            required />
+          <label for="female">Female</label>
+        </div>
+
+        <div>
+          <label class="property" for="age">Age: </label>
+          <input
+            type="text"
+            id="age"
+            name="age"
+            maxlength="2"
+            size="6"
+            required />
+        </div>
+
+        <div>
+          <label class="property" for="personalityType"
+            >Personality type:
+          </label>
+          <input
+            type="text"
+            id="personalityType"
+            name="personalityType"
+            maxlength="4"
+            size="6"
+            required />
+          <a
+            class="type-info"
+            href="http://www.humanmetrics.com/cgi-win/JTypes2.asp"
+            target="_blank">
+            <span class="bracket">(</span>Don't know your type?<span
+              class="bracket"
+              >)</span
+            >
+          </a>
+        </div>
+
+        <div>
+          <label class="property" for="favOS">Favorite OS: </label>
+          <select id="favOS" name="favOS" required>
+            <option value="windows">Windows</option>
+            <option value="mac">Mac OS X</option>
+            <option value="linux">Linux</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="property" for="seekingAge">Seeking age:</label>
+          <input
+            type="text"
+            id="seekingAge"
+            name="minAge"
+            placeholder="min"
+            maxlength="2"
+            size="6"
+            required />
+          <label for="to" style="margin: 0 4px">to</label>
+          <input
+            type="text"
+            id="seekingAge"
+            name="maxAge"
+            placeholder="max"
+            maxlength="2"
+            size="6"
+            required />
+        </div>
+
+        <button type="submit">Sign Up</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

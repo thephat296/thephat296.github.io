@@ -1,0 +1,46 @@
+fieldset {
+  background-color: rgb(209, 193, 224);
+  border-radius: 4px;
+  border-style: outset;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+legend {
+  background-color: #ffffff;
+  border-style: outset;
+}
+
+fieldset div {
+  display: flex;
+  margin: 5px 0;
+}
+
+.property {
+  width: 140px;
+  font-weight: bold;
+}
+
+button {
+  margin-top: 10pt;
+  border-style: outset;
+  background-color: lightsalmon;
+  font-weight: bold;
+  font-size: 20px;
+  max-width: fit-content;
+}
+
+input {
+  border-color: white;
+  border-style: ridge;
+}
+
+.type-info {
+  margin: 0 5px;
+  color: rgb(218, 100, 100);
+}
+
+.bracket {
+  color: black;
+}
