@@ -1,0 +1,29 @@
+h1 {
+  color: blue;
+}
+
+body {
+  border: 4px solid blue;
+  padding: 0 25px 25px;
+  max-width: 600px;
+  width: fit-content;
+}
+
+form {
+  display: flex;
+}
+
+.input {
+  width: 300px;
+  margin-right: 20px;
+}
+
+input {
+  width: 70%;
+  margin-bottom: 7px;
+}
+
+.input button {
+  width: 70%;
+  margin: 7px 0;
+}
