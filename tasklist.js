@@ -1,10 +1,11 @@
 function addTask() {
   let tasksForm = document.forms["task-list-form"];
-  let task = tasksForm["task"].value;
+  let task = tasksForm["task"];
   if (task == "") return;
   let taskList = tasksForm["task-list"];
-  taskList.value = taskList.value == "" ? task : taskList.value + "\n" + task;
+  taskList.value = taskList.value == "" ? task.value : taskList.value + "\n" + task.value;
   localStorage.setItem("taskList", taskList.value);
+  task.value = ""
 }
 
 function clearTasks() {
