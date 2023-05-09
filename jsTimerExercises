@@ -1,0 +1,28 @@
+// 1. What is the difference between the following 2 statements?
+setTimeout(booyah, 2000);   // -> function booyah is invoked after 2 secons
+setTimeout(booyah(), 2000); // -> function booyah is invoked immediately and pass its return value to setTimeout function as parameter
+
+
+// 2. What do the following 2 alerts display (answer without running the code)?
+var myfunc = function(a, x) {
+ return a * x;
+};
+var x = myfunc(2, 3);
+var y = myfunc;
+alert(x);      // -> 6
+alert(y(2,3)); // -> 6
+
+
+// 3. Write functions booyah1 and booyah2 so that in both cases below, an alert box comes up after 2 seconds tha says “BOOYAH!”
+function booyah1() {
+  alert("BOOYAH!");
+}
+let booyah2 = function() {
+  return booyah1;
+}
+setTimeout(booyah1, 2000);
+setTimeout(booyah2(), 2000);
+
+
+// 4. - What is "Unobtrusive Javascript"? -> HTML with minimal JavaScript inside, uses the DOM to attach and execute all JavaScript functions
+//    - What is the practical application of Unobtrusive Javascript (and the reasons for using it)? -> separation of content (HTML) and behavior (Javascript)
