@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bank Account Application</title>
+    <link rel="stylesheet" href="account.css" />
+  </head>
+  <body>
+    <div class="item">
+      <label for="account-name">Account name: </label>
+      <input type="text" id="account-name" name="account-name" />
+    </div>
+
+    <div class="item">
+      <label for="initial-deposit">Deposit: </label>
+      <input type="text" id="initial-deposit" name="initial-deposit" />
+    </div>
+
+    <div class="item">
+      <button id="create-account">Create new account</button>
+    </div>
+
+    <div class="item">
+      <label for="account-list-dropdown">List of accounts: </label>
+      <select id="account-list-dropdown" name="account-list-dropdown"></select>
+    </div>
+
+    <div class="item">
+      <input type="text" id="deposit-amount" name="deposit-amount" placeholder="amount" />
+      <button id="deposit-button"">Deposit</button>
+    </div>
+
+    <div class="item">
+      <input type="text" id="debit-amount" name="debit-amount" placeholder="amount" />
+      <button id="debit-button">Debit</button>
+    </div>
+
+    <textarea name="account-info-list" id="account-info-list" cols="70" rows="10"></textarea>
+  </body>
+  <script src="account.js"></script>
+</html>
