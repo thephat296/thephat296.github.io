@@ -16,16 +16,23 @@ exports.calculate = (req, res) => {
       result = num1 * num2;
       break;
     case "divide":
-      if (num2 === 0) {
-        res.send("Cannot devide a number by zero!");
-        return;
-      }
-      result = num1 / num2;
+      result = num2 === 0 ? "Cannot devide a number by zero!" : num1 / num2;
       break;
     default:
-      res.send("Operation not found!");
-      return;
+      result = "Operation not found!";
+      break;
   }
 
-  res.send(`The Answer is: ${result}`);
+  res.send(
+    `<!DOCTYPE html>
+    <html>
+      <head>
+        <title>Result</title>
+      </head>
+      <body>
+        <h1>The Answer is: ${result}</h1>
+        <a href="/">Another calculation</a>
+      </body>
+    </html>`
+  );
 };
