@@ -23,16 +23,5 @@ exports.calculate = (req, res) => {
       break;
   }
 
-  res.send(
-    `<!DOCTYPE html>
-    <html>
-      <head>
-        <title>Result</title>
-      </head>
-      <body>
-        <h1>The Answer is: ${result}</h1>
-        <a href="/">Another calculation</a>
-      </body>
-    </html>`
-  );
+  res.render("result", {result: result});
 };

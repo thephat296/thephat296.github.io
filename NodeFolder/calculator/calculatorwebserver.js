@@ -3,9 +3,11 @@ const app = express();
 const calculatorMod = require("./calculatormodule.js");
 
 // Set up the route for the home page
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/calculator.html");
+app.get("/", function (req, res) {
+  res.render("calculator");
 });
+
+app.set("view engine", "pug");
 
 app.get("/calculate", calculatorMod.calculate);
 
