@@ -1,52 +1,53 @@
-window.onload = function () {
-  var puzzlePieces = document.querySelectorAll("#puzzlearea div");
-  var shuffleButton = document.getElementById("shufflebutton");
+$(document).ready(function () {
+  var puzzlePieces = $("#puzzlearea div");
+  var shuffleButton = $("#shufflebutton");
   var emptySpace = { top: 300, left: 300 };
 
   initializePuzzlePieces();
 
-  for (var i = 0; i < puzzlePieces.length; i++) {
-    var piece = puzzlePieces[i];
-    piece.addEventListener("click", movePiece);
-    piece.addEventListener("mouseover", highlightPiece);
-    piece.addEventListener("mouseout", removeHighlight);
-  }
+  puzzlePieces.each(function (index, piece) {
+    $(piece).on("click", movePiece);
+    $(piece).on("mouseover", highlightPiece);
+    $(piece).on("mouseout", removeHighlight);
+  });
 
-  shuffleButton.addEventListener("click", shufflePuzzle);
+  shuffleButton.on("click", shufflePuzzle);
 
   function initializePuzzlePieces() {
-    for (var i = 0; i < puzzlePieces.length; i++) {
-      var piece = puzzlePieces[i];
-      var x = (i % 4) * 100;
-      var y = Math.floor(i / 4) * 100;
+    puzzlePieces.each(function (index, piece) {
+      var x = (index % 4) * 100;
+      var y = Math.floor(index / 4) * 100;
 
-      piece.className = "puzzlepiece";
-      piece.style.left = x + "px";
-      piece.style.top = y + "px";
-      piece.style.backgroundPosition = -x + "px " + -y + "px";
-    }
+      $(piece)
+        .removeClass()
+        .addClass("puzzlepiece")
+        .css({
+          left: x + "px",
+          top: y + "px",
+          backgroundPosition: -x + "px " + -y + "px",
+        });
+    });
   }
 
   function movePiece() {
-    if (isMovablePiece(this)) {
-      var top = parseInt(this.style.top);
-      var left = parseInt(this.style.left);
+    if (isMovablePiece($(this))) {
+      var top = parseInt($(this).css("top"));
+      var left = parseInt($(this).css("left"));
 
-      this.style.top = emptySpace.top + "px";
-      this.style.left = emptySpace.left + "px";
+      $(this).css({ top: emptySpace.top + "px", left: emptySpace.left + "px" });
       emptySpace.top = top;
       emptySpace.left = left;
     }
   }
 
   function highlightPiece() {
-    if (isMovablePiece(this)) {
-      this.classList.add("movablepiece");
+    if (isMovablePiece($(this))) {
+      $(this).addClass("movablepiece");
     }
   }
 
   function removeHighlight() {
-    this.classList.remove("movablepiece");
+    $(this).removeClass("movablepiece");
   }
 
   function shufflePuzzle() {
@@ -59,8 +60,8 @@ window.onload = function () {
   }
 
   function isMovablePiece(piece) {
-    var top = parseInt(piece.style.top);
-    var left = parseInt(piece.style.left);
+    var top = parseInt(piece.css("top"));
+    var left = parseInt(piece.css("left"));
 
     return (
       (top === emptySpace.top && Math.abs(left - emptySpace.left) === 100) ||
@@ -71,12 +72,12 @@ window.onload = function () {
   function getMovablePieces() {
     var movablePieces = [];
 
-    for (var i = 0; i < puzzlePieces.length; i++) {
-      if (isMovablePiece(puzzlePieces[i])) {
-        movablePieces.push(puzzlePieces[i]);
+    puzzlePieces.each(function (index, piece) {
+      if (isMovablePiece($(piece))) {
+        movablePieces.push(piece);
       }
-    }
+    });
 
     return movablePieces;
-  }     
-};
+  }
+});
