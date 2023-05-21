@@ -26,15 +26,6 @@ const sequences = [
   { question: [0, 1, 1, 2, 3], answer: 5 },
 ];
 
-// Middleware to check if the user is authenticated
-const requireAuth = (req, res, next) => {
-  if (req.session.authenticated) {
-    next();
-  } else {
-    res.redirect("/login");
-  }
-};
-
 app.get("/", (req, res) => {
   const quizNumber = req.session.quizNumber || 0;
   const score = req.session.score || 0;
