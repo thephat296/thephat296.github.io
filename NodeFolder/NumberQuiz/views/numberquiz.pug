@@ -1,0 +1,16 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  link(rel='stylesheet' href='./numberQuiz.css')
+  title Number Quiz
+h1 The Number Quiz
+div
+  p Your current score is #{score}
+  p Guess the next number in the sequence.
+  p #{question}
+  form(action='' method='post')
+    label(for='answer') Your answer: 
+    input#answer(type='number' name='answer')
+    br
+    br
+    button(type='submit') Submit
