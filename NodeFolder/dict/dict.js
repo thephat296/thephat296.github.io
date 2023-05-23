@@ -1,4 +1,8 @@
 $(document).ready(function () {
+  $("#loader").hide();
+  $(document)
+    .ajaxStart(() => $("#loader").show())
+    .ajaxStop(() => $("#loader").hide());
   $("#lookup-btn").click(getDefinitions);
 });
 
@@ -21,7 +25,9 @@ function displayDefinitions(definitions) {
   if (definitions.length > 0) {
     for (var i = 0; i < definitions.length; i++) {
       $definitionsDiv.append(
-        `<p> ${i + 1}(${definitions[i].wordtype}) :: ${definitions[i].definition}</p><br/>`
+        `<p> ${i + 1}(${definitions[i].wordtype}) :: ${
+          definitions[i].definition
+        }</p><br/>`
       );
     }
   } else {
