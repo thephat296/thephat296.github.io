@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+}
+
+h1 {
+  padding: 10px;
+  background-color: lightslategray;
+}
+
+.input {
+  padding: 5px 10px;
+  background-color: lightgrey;
+}
+
+#definitions {
+  margin: 10px 10px;
+}
