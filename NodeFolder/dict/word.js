@@ -5,23 +5,23 @@ const connection = mysql.createConnection({
   port: 3306,
   user: "root",
   password: "Aa123456",
-  database: "entries"
+  database: "entries",
 });
 
 connection.connect();
 
-function getDefinitions(word, callback) {
-  const query = "SELECT definition FROM Dictionary WHERE word = ?";
-  connection.query(query, [word], function (error, results, fields) {
+exports.getDefinitions = (req, res) => {
+  let { word } = req.query;
+  const query = `SELECT * FROM entries WHERE word like '${word}'`;
+  connection.query(query, function (error, result) {
     if (error) {
-      callback(error, null);
+      res.send("Internal Server Error");
     } else {
-      const definitions = results.map((result) => result.definition);
-      callback(null, definitions);
+      let results = JSON.stringify(result);
+      console.log("===== get definitions success: " + results);
+      res.send(results);
     }
+    console.log("===== get definitions end: ");
+    res.end();
   });
-}
-
-module.exports = {
-  getDefinitions: getDefinitions,
 };

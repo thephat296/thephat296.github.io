@@ -2,19 +2,14 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const word = require("./word");
+var cors = require('cors')
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cors())
 
-app.post("/lookup", function (req, res) {
-  var wordToLookup = req.body.word;
-  word.getDefinitions(wordToLookup, function (err, definitions) {
-    if (err) {
-      res.status(500).json({ error: "Internal Server Error" });
-    } else {
-      res.json(definitions);
-    }
-  });
+app.get("/", (req, res) => {
+  word.getDefinitions(req, res);
 });
 
 app.listen(3000, function () {

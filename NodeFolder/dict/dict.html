@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Online English Dictionary</title>
+    <title>WAP Online Dictionary</title>
     <link rel="stylesheet" type="text/css" href="dict.css" />
-  </head>
-  <body>
-    <h1>Online English Dictionary</h1>
-    <input type="text" id="wordInput" placeholder="Enter a word" />
-    <button id="lookupBtn">Lookup</button>
-    <div id="definitions"></div>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="dict.js"></script>
+  </head>
+  <body>
+    <h1>WAP Online Dictionary</h1>
+    <div class="input">
+      <label for="word-input">Term:</label>
+      <input
+        type="text"
+        id="word-input"
+        name="search"
+        placeholder="Enter a word" />
+      <button id="lookup-btn">Lookup</button>
+    </div>
+    <div id="definitions"></div>
   </body>
 </html>
