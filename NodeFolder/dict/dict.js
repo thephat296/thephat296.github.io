@@ -30,6 +30,5 @@ function displayDefinitions(definitions) {
 }
 
 function noDefinition(error) {
-  console.log("-------error" + error);
-  // alert(error.responseText);
+  alert("Internal Server Error!");
 }

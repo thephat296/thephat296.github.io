@@ -18,10 +18,8 @@ exports.getDefinitions = (req, res) => {
       res.send("Internal Server Error");
     } else {
       let results = JSON.stringify(result);
-      console.log("===== get definitions success: " + results);
       res.send(results);
     }
-    console.log("===== get definitions end: ");
     res.end();
   });
 };
