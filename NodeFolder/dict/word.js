@@ -13,12 +13,11 @@ connection.connect();
 exports.getDefinitions = (req, res) => {
   let { word } = req.query;
   const query = `SELECT * FROM entries WHERE word like '${word}'`;
-  connection.query(query, function (error, result) {
+  connection.query(query, (error, result) => {
     if (error) {
       res.send("Internal Server Error");
     } else {
-      let results = JSON.stringify(result);
-      res.send(results);
+      res.send(JSON.stringify(result));
     }
     res.end();
   });

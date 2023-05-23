@@ -22,19 +22,19 @@ function getDefinitions() {
 function displayDefinitions(definitions) {
   var $definitionsDiv = $("#definitions");
   $definitionsDiv.empty();
-  if (definitions.length > 0) {
-    for (var i = 0; i < definitions.length; i++) {
-      $definitionsDiv.append(
-        `<p> ${i + 1}(${definitions[i].wordtype}) :: ${
-          definitions[i].definition
-        }</p><br/>`
-      );
-    }
-  } else {
-    $definitionsDiv.append("<p>No definitions found.</p>");
+  if (definitions.length == 0) {
+    return $definitionsDiv.append("<p>No definitions found.</p>");
   }
+  definitions.forEach((definition, index) => {
+    $definitionsDiv.append(
+      `<p> ${index + 1}(${definition.wordtype}) :: ${
+        definition.definition
+      }</p><br/>`
+    );
+  });
 }
 
 function noDefinition(error) {
+  console.log("No Definition: " + error);
   alert("Internal Server Error!");
 }
